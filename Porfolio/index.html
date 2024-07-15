@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <style>
+    /*  */
+
+    .logo {
+      max-width: 100%;
+      /* Ensure the logo never exceeds its original size */
+      height: auto;
+      /* Maintain aspect ratio */
+      display: block;
+      /* Remove any default inline spacing */
+      margin: 0 auto;
+      /* Center the image horizontally */
+    }
+
+    .check {
+      border-radius: 50px;
+    }
+
+    .hero-info {
+      width: 100%;
+      font-size: 20px;
+      padding: 20px;
+      font-weight: bold;
+      text-align: start;
+    }
+
+    .hero-img {
+      width: 300px;
+      border-radius: 50%;
+      margin: auto;
+    }
+
+    @keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-left {
+  animation: fade-in-left 1s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fade-in-right 1s ease-out;
+}
+
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="bg-zinc-900">
+  <div class="navbar flex justify-between text-white p-2 ">
+    <div class="mt-4 ml-3">
+      <h1 class="text-emerald-400 text-3xl font-bold">TejasPagare</h1>
+    </div>
+    <div class="hidden mt-4 sm:block">
+      <ul class="flex justify-evenly w-full ">
+        <li class="mx-2"><a class="text-lg hover:text-emerald-500" href="#">Skills</a></li>
+        <li class="mx-2"><a class="text-lg hover:text-emerald-500" href="#">Projects</a></li>
+        <li class="mx-2"><a class="text-lg hover:text-emerald-500" href="#">Contact</a></li>
+        <li class="mx-2"><a class="text-lg hover:text-emerald-500" href="#">About me</a></li>
+      </ul>
+    </div>
+    <div class="sm:hidden">
+      <!-- Sidebar Trigger Button -->
+      <button id="sidebarToggle" class="material-symbols-outlined text-4xl  p-2 mt-1 mr-5 focus:outline-none">
+        menu
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+    class="fixed inset-y-0 right-0 bg-zinc-900 w-64 p-4 transform translate-x-full transition duration-300 ease-in-out">
+    <ul class="mt-2">
+      <li><a id="closeSidebar" class="text-lg text-white hover:text-emerald-500 block py-2 cursor-pointer"><span
+            class="material-symbols-outlined">close</span></a></li>
+      <li><a class="text-lg text-white hover:text-emerald-500 block py-2" href="#">Skills</a></li>
+      <li><a class="text-lg text-white hover:text-emerald-500 block py-2" href="#">Projects</a></li>
+      <li><a class="text-lg text-white hover:text-emerald-500 block py-2" href="#">Contact</a></li>
+      <li><a class="text-lg text-white hover:text-emerald-500 block py-2" href="#">About me</a></li>
+    </ul>
+  </div>
+
+  <!-- hero section -->
+  <!-- <div class="flex flex-col gap-20 w-11/12	m-auto	 md:flex-row ">
+    <div class="text-white hero-info text-2xl  flex items-center	justify-center	text-start	 md:w-full p-10 ">
+      Hello! I'm Tejas Pagare, currently studying at IIIT Sri City. I am passionate about web development and
+      engineering, constantly exploring the intersection of creativity and technology. My journey is driven by a deep
+      curiosity to innovate and create meaningful experiences through code.
+    </div>
+
+    <div class="  w-full flex justify-center	"><img class=" hero-img m-10" src="/image/myImage.jpg" alt=""></div>
+  </div> -->
+
+  <div class="flex flex-col gap-20 w-11/12 m-auto md:flex-row">
+    <div class="text-white hero-info text-2xl flex items-center justify-center text-start md:w-full p-10 animate-fade-in-left">
+      Hello! I'm Tejas Pagare, currently studying at IIIT Sri City. I am passionate about web development and engineering, constantly exploring the intersection of creativity and technology. My journey is driven by a deep curiosity to innovate and create meaningful experiences through code.
+    </div>
+  
+    <div class="w-full flex justify-center animate-fade-in-right">
+      <img class="hero-img m-10" src="./image/myImage.jpg" alt="">
+    </div>
+  </div>
+  
+
+
+  <section id="skills" class="section">
+    <div class="container mx-auto py-12">
+      <h2 class="text-3xl font-bold text-center text-emerald-500 mb-6">Skills</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5  ml-10">
+        <div class="bg-zinc-800 text-white p-6 rounded-lg drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] check">
+          <h3 class="text-2xl font-bold text-red-500 mb-3 align-centre text-center text-3xl">Technical Skills</h3>
+          <ul class="list-disc list-inside">
+
+
+            <li class="text-white font-semibold list-none text-center text-xl	">Java</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">C-Programming</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">Basic-Python</li>
+            <li class="text-white font-semibold list-none text-center text-xl	">Javascript</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">Nodejs</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">HTML5 & CSS3</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">Expressjs</li>
+            <li class="text-white font-semibold list-none	text-center text-xl">SQL</li>
+
+            <!-- Add more technical skills -->
+          </ul>
+        </div>
+
+        <div class="bg-zinc-800 p-6 rounded-lg shadow-lg drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] check">
+          <h3 class=" font-bold text-red-500 mb-3 text-center text-2xl">Soft Skills</h3>
+          <ul class="list-disc list-inside ">
+            <li class="text-white font-semibold list-none text-center text-xl ">Communication</li>
+            <li class="text-white font-semibold list-none text-center text-xl ">Problem-solving</li>
+            <li class="text-white font-semibold list-none text-center text-xl ">Teamwork</li>
+            <!-- Add more soft skills -->
+          </ul>
+        </div>
+
+        <div class="bg-zinc-800 p-6 rounded-lg shadow-lg 	 drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] check">
+          <h3 class="text-2xl font-bold text-red-500 mb-3  text-center text-3xl">Tools & Software</h3>
+          <ul class="list-disc list-inside">
+            <li class="text-white font-semibold list-none text-center text-xl ">Ubuntu</li>
+            <li class="text-white font-semibold list-none text-center text-xl ">Microsoft Office</li>
+            <li class="text-white font-semibold list-none text-center text-xl ">Vs-code</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="projects">
+    <h2 class="text-3xl font-bold text-center text-emerald-500 mb-6">Projects</h2>
+    <div class="container mx-auto py-5 flex flex-wrap gap-10 ">
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 animate-fade-in-left ">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/Tic-tac-toe.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Tic Tac Toe</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Lets's Play</a></div>
+      </div>
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 animate-fade-in-right">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/rock.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Rock Paper Scissors</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Lets's Play</a></div>
+      </div>
+
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 animate-fade-in-right">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/todo.jpeg);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Todo List</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Use</a></div>
+      </div>
+
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 ">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/burger-web.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Burger Website</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Visit</a></div>
+      </div>
+
+
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 ">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/music-web.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Music Website</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">visit</a></div>
+      </div>
+
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 ">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/fitness-web.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Fitness Website</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Visit</a></div>
+      </div>
+
+      <div class="w-72 h-65 bg-zinc-800 p-5 rounded-lg m-auto mb-7 ">
+        <div class=" h-48 mb-3 bg-red-500 rounded-lg bg-cover bg-centre "
+          style="background-image: url(./image/cofee-web.png);">
+          <!-- <img class=" h-full" src="/image/todo.jpeg" alt=""> -->
+        </div>
+        <div class="text-2xl text-white font-bold mb-2 text-center">Coffee Website</div>
+        <div class=" text-xl text-emerald-300 text-center mb-2 font-semibold"><a href="#">Visit</a></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  
+
+  <footer class="bg-zinc-800 text-white py-8">
+    <div class="container mx-auto flex justify-between px-6">
+      <div class="w-1/2">
+        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+        <ul>
+          <li class="mb-2"><span class="text-blue-500">Email:</span> tejaskiran.p23@iiits.in</li>
+          <li><span class="text-blue-500">Mobile:</span> 7558388619</li>
+        </ul>
+      </div>
+      <div class="w-1/4">
+        <h2 class="text-2xl font-bold mb-4">Social Media</h2>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white hover:text-blue-500">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="#" class="text-white hover:text-blue-500">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="#" class="text-white hover:text-blue-500">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+
+  </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const closeSidebar = document.getElementById('closeSidebar');
+
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('translate-x-0');
+      });
+
+      closeSidebar.addEventListener('click', () => {
+        sidebar.classList.remove('translate-x-0');
+      });
+    });
+  </script>
+</body>
+
+</html>
